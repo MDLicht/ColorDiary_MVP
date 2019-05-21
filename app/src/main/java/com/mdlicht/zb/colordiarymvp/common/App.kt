@@ -44,10 +44,10 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         INSTANCE = this
-        Typekit.getInstance()
-            .addNormal(Typekit.createFromAsset(this, "NanumGothic.ttf"))
-            .addBold(Typekit.createFromAsset(this, "NanumGothicBold.ttf"))
-            .addCustom1(Typekit.createFromAsset(this, "NanumGothicLight.ttf"))
+//        Typekit.getInstance()
+//            .addNormal(Typekit.createFromAsset(this, "NanumGothic.ttf"))
+//            .addBold(Typekit.createFromAsset(this, "NanumGothicBold.ttf"))
+//            .addCustom1(Typekit.createFromAsset(this, "NanumGothicLight.ttf"))
 
         val feel = resources.getStringArray(R.array.feelings)
         val feelColor = resources.getIntArray(R.array.feel_colors)

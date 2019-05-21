@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00b894</color>
+    <color name="colorPrimaryDark">#00b894</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorVecPrimary">#222222</color>
+
+    <color name="colorTextPrimary">#222222</color>
+    <color name="colorTextSub">#888888</color>
+    <color name="colorTextDim">#bbbbbb</color>
+
+    <color name="color_history_background">#dddddd</color>
+
+    <color name="color_chip_nor_mask">#33000000</color>
+
+    <array name="feel_colors">
+        <item>@color/color_chip_happy</item>
+        <item>@color/color_chip_soso</item>
+        <item>@color/color_chip_sad</item>
+        <item>@color/color_chip_angry</item>
+        <item>@color/color_chip_worst</item>
+    </array>
+
+    <color name="color_chip_happy">#aa00b894</color>
+    <color name="color_chip_angry">#aad63031</color>
+    <color name="color_chip_sad">#aa0984e3</color>
+    <color name="color_chip_soso">#aafdcb6e</color>
+    <color name="color_chip_worst">#aa636e72</color>
+
+    <color name="color_chip_happy_dim">#3300b894</color>
+    <color name="color_chip_angry_dim">#33d63031</color>
+    <color name="color_chip_sad_dim">#330984e3</color>
+    <color name="color_chip_soso_dim">#33fdcb6e</color>
+    <color name="color_chip_worst_dim">#33636e72</color>
+</resources>

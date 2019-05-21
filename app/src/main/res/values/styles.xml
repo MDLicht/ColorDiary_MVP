@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="ReadDiaryTextTheme">
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorTextSub</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="InputDiaryTextTheme">
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:textColor">@color/colorTextSub</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="Buttons">
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorTextSub</item>
+    </style>
+
+    <style name="ToolbarDateTheme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <!--<item name="android:textColor"></item>-->
+        <!--<item name="android:textStyle"></item>-->
+    </style>
+
+    <style name="EmptyGuideTheme">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorTextSub</item>
+    </style>
+
+    <style name="ToolbarMenuButtonTheme">
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="FullScreenDialogTheme" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_dialog</item>
+    </style>
+</resources>

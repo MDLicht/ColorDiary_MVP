@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp" app:contentInsetEnd="0dp"
+        android:elevation="@dimen/toolbar_elevation">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="@+id/toolbar"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar">
+
+        <TextView
+                style="@style/ToolbarDateTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:id="@+id/tvTitle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+        />
+        <ImageView
+                style="@style/ToolbarMenuButtonTheme"
+                android:layout_width="@dimen/toolbar_menu_icon_size"
+                android:layout_height="@dimen/toolbar_menu_icon_size"
+                app:srcCompat="@drawable/ic_vec_hamburger"
+                android:id="@+id/ivDrawer"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <ImageView
+                style="@style/ToolbarMenuButtonTheme"
+                android:layout_width="@dimen/toolbar_menu_icon_size"
+                android:layout_height="@dimen/toolbar_menu_icon_size" app:srcCompat="@drawable/ic_vec_table"
+                android:id="@+id/ivColorHistory" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.Toolbar>

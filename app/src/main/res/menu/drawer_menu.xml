@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item android:id="@+id/nav_colorHistory"
+              android:icon="@drawable/ic_vec_table"
+              android:title="@string/drawer_menu_color_history"/>
+        <item android:id="@+id/nav_timeline"
+              android:icon="@drawable/ic_vec_timeline"
+              android:title="@string/drawer_menu_timeline"/>
+        <item android:id="@+id/nav_settings"
+              android:icon="@drawable/ic_vec_settings"
+              android:title="@string/drawer_menu_settings"/>
+    </group>
+</menu>

@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">Color Diary MVP</string>
+
+    <string name="common_yes">예</string>
+    <string name="common_no">아니요</string>
+    <string name="common_notice">알림</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+    <string name="min_date">2000.01.01</string>
+    <string name="max_date">2200.12.31</string>
+
+    <string name="drawer_menu_color_history">감정기록</string>
+    <string name="drawer_menu_timeline">타임라인</string>
+    <string name="drawer_menu_settings">설정</string>
+
+    <string name="title_modify">수정</string>
+    <string name="title_delete">삭제</string>
+
+    <string-array name="settings_title_list">
+        <item>@string/settings_export</item>
+        <item>@string/settings_import</item>
+        <item>@string/settings_alarm</item>
+    </string-array>
+    <string name="settings_export">백업</string>
+    <string name="settings_import">복구</string>
+    <string name="settings_alarm">알림</string>
+
+    <string-array name="feelings">
+        <item>@string/feel_happy</item>
+        <item>@string/feel_soso</item>
+        <item>@string/feel_sad</item>
+        <item>@string/feel_angry</item>
+        <item>@string/feel_worst</item>
+    </string-array>
+    <string name="feel_happy">happy</string>
+    <string name="feel_soso">soso</string>
+    <string name="feel_sad">sad</string>
+    <string name="feel_angry">angry</string>
+    <string name="feel_worst">worst</string>
+
+    <string-array name="weekday_labels">
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
+
+    <string-array name="main_today_guide_array">
+        <item>@string/main_today_guide01</item>
+        <item>@string/main_today_guide02</item>
+        <item>@string/main_today_guide03</item>
+        <item>@string/main_today_guide04</item>
+        <item>@string/main_today_guide05</item>
+        <item>@string/main_today_guide06</item>
+        <item>@string/main_today_guide07</item>
+        <item>@string/main_today_guide08</item>
+        <item>@string/main_today_guide09</item>
+        <item>@string/main_today_guide10</item>
+    </string-array>
+    <string name="main_today_guide01">오늘 하루 어땠나요?</string>
+    <string name="main_today_guide02">오늘은 어떤 좋은 일이 있었나요?</string>
+    <string name="main_today_guide03">오늘도 고생했어요.</string>
+    <string name="main_today_guide04">근사한 하루를 보냈나요?</string>
+    <string name="main_today_guide05">걱정말아요,\n내일은 오늘보다 더 나을 거예요.</string>
+    <string name="main_today_guide06">지금까지 잘해왔고,\n앞으로도 잘 해낼 거예요.</string>
+    <string name="main_today_guide07">토닥토닥,\n누군가에게 위로받고 싶은 날이었나요?</string>
+    <string name="main_today_guide08">괜찮아요.\n충분히 잘 하고 있어요.</string>
+    <string name="main_today_guide09">늘 응원하고 있어요,\n화이팅!</string>
+    <string name="main_today_guide10">조금은 서툴러도 괜찮아요.\n우리는 항상 성장하는 중인걸요.</string>
+
+    <string name="noti_contents">오늘은 어떤 일이 있었나요?</string>
+
+    <string name="msg_empty_diary_feel">오늘의 기분을 선택해주세요.</string>
+    <string name="msg_empty_diary_contents">내용을 입력해주세요.</string>
+    <string name="msg_delete_diary">일기를 삭제할까요?</string>
+    <string name="msg_empty_diary_database">작성된 일기가 없어요.</string>
+    <string name="msg_export_complete">내장 메모리 내 [ColorDiary] 폴더에 백업파일을 생성했어요.\n앱을 다시 시작할게요.</string>
+    <string name="msg_select_import_db_file">데이터 파일을 선택해주세요.</string>
+    <string name="msg_import_failed">데이터 복구를 실패했어요.\n파일을 확인해주세요.</string>
+    <string name="msg_import_success">데이터 복구를 완료했어요.\n앱을 다시 시작할게요.</string>
+    <string name="msg_import_alert">데이터 복구 시 기존 데이터는 지워져요!\n기존 파일을 선택해서 복구하시겠어요?</string>
+    <string name="msg_finish_app_guide">뒤로가기 버튼을 한 번 더 누르면 앱이 종료돼요.</string>
+
+    <string name="permission_msg_title">권한 요청</string>
+    <string name="permission_msg_contents">작성하신 내용을 포함한 백업파일을 저장/불러오기 위해서 권한이 필요합니다.</string>
+    <string name="permission_msg_denied">해당 기능을 사용하기 위해서는 권한이 필요합니다.</string>
+
+    <string name="notification_channel_name">일일알림</string>
+    <string name="notification_channel_desc">오후 8시마다 작성할 수 있도록 알림</string>
+</resources>

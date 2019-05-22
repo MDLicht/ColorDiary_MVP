@@ -3,21 +3,29 @@ package com.mdlicht.zb.colordiarymvp.dialog
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 
 import com.mdlicht.zb.colordiarymvp.R
+import com.mdlicht.zb.colordiarymvp.common.showToast
+import com.mdlicht.zb.colordiarymvp.constract.DiaryDialogConstract
+import com.mdlicht.zb.colordiarymvp.database.repository.DiaryRepository
+import com.mdlicht.zb.colordiarymvp.presenter.DiaryDialogPresenter
 import kotlinx.android.synthetic.main.fragment_diary_dialog.*
 
-class DiaryDialog : FullScreenDialog() {
+class DiaryDialog : FullScreenDialog(), DiaryDialogConstract.View {
     private var id: Int? = -1
     private var contents: String? = null
     private var feel: String? = null
     private var date: String? = null
 
     private var listener: OnDiaryDialogListener? = null
+
+    private lateinit var presenter: DiaryDialogConstract.Presenter
 
     fun setDiaryDialogListener(listener: OnDiaryDialogListener?) {
         this.listener = listener
@@ -43,17 +51,53 @@ class DiaryDialog : FullScreenDialog() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initPresenter()
+    }
+
+    override fun initPresenter() {
+        presenter = DiaryDialogPresenter(this, DiaryRepository(context!!))
+    }
+
+    override fun initView() {
         tvTitle.text = date
 
+        etContents.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                contents = p0?.toString() ?: ""
+            }
+        })
+
         ivConfirm.setOnClickListener {
-            listener?.onWriteClick()
+            presenter.saveDiary(id, contents, feel, date)
         }
 
         ivClose.setOnClickListener {
             listener?.onCloseClick()
         }
 
+        rgFeel.setOnCheckedChangeListener { radioGroup, i ->
+            radioGroup.findViewById<RadioButton>(i)?.let {
+                feel = it.tag as String
+            }
+        }
+
         addRadioButtons()
+    }
+
+    override fun showMsg(msg: String) {
+        context?.showToast(msg)
+    }
+
+    override fun diaryUpdated() {
+        listener?.onWriteClick()
     }
 
     private fun addRadioButtons() {
@@ -66,7 +110,7 @@ class DiaryDialog : FullScreenDialog() {
             }
             rgFeel.addView(radio)
         }
-        arguments?.getString(DiaryDialog.KEY_FEEL)?.let {
+        arguments?.getString(KEY_FEEL)?.let {
             rgFeel.findViewWithTag<RadioButton>(it)?.let{ rb ->
                 rgFeel.check(rb.id)
             }

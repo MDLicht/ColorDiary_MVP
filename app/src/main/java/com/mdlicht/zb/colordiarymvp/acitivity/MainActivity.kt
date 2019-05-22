@@ -14,7 +14,6 @@ import com.mdlicht.zb.colordiarymvp.constract.MainConstract
 import com.mdlicht.zb.colordiarymvp.database.model.Diary
 import com.mdlicht.zb.colordiarymvp.database.repository.DiaryRepository
 import com.mdlicht.zb.colordiarymvp.dialog.DiaryDialog
-import com.mdlicht.zb.colordiarymvp.fragment.MainFragment
 import com.mdlicht.zb.colordiarymvp.presenter.MainPresenter
 import com.mdlicht.zb.colordiarymvp.util.ColorDiaryUtil
 import com.mdlicht.zb.colordiarymvp.util.TimeUtil
@@ -23,7 +22,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.subjects.BehaviorSubject
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.fabWrite
 import kotlinx.android.synthetic.main.toolbar_main.view.*
 import org.threeten.bp.LocalDate
 import org.threeten.bp.format.DateTimeFormatter

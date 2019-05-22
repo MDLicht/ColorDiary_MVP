@@ -8,7 +8,7 @@ import android.content.Intent
 import android.support.v4.app.NotificationCompat
 import android.support.v4.app.TaskStackBuilder
 import com.mdlicht.zb.colordiarymvp.R
-import com.mdlicht.zb.colordiarymvp.acitivity.MainActivity
+import com.mdlicht.zb.colordiarymvp.activity.MainActivity
 import com.mdlicht.zb.colordiarymvp.util.AlarmUtil
 import com.mdlicht.zb.colordiarymvp.util.AlarmUtil.ID_DAILY_8
 import com.mdlicht.zb.colordiarymvp.util.PreferenceUtil

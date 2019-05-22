@@ -1,7 +1,8 @@
-package com.mdlicht.zb.colordiarymvp.acitivity
+package com.mdlicht.zb.colordiarymvp.activity
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.Observer
+import android.content.Intent
 import android.os.Bundle
 import android.support.constraint.ConstraintSet
 import android.support.v7.widget.Toolbar
@@ -153,7 +154,7 @@ class MainActivity : BaseActivity(), MainConstract.View {
             }
 
             ivColorHistory.setOnClickListener {
-                //                startActivity(Intent(this@MainActivity, ColorHistoryActivity::class.java))
+                startActivity(Intent(this@MainActivity, ColorHistoryActivity::class.java))
             }
 
             ivDrawer.setOnClickListener {
@@ -177,7 +178,7 @@ class MainActivity : BaseActivity(), MainConstract.View {
 
     override fun updateDiary(diary: Diary?) {
         this.diary = diary
-        if(diary == null) {
+        if (diary == null) {
             tvTodayGuide.text = ColorDiaryUtil.getTodayGuilde()
         } else {
             tvTodayGuide.text = diary.getDecryptContents()

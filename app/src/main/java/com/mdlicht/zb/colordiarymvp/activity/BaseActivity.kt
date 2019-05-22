@@ -1,4 +1,4 @@
-package com.mdlicht.zb.colordiarymvp.acitivity
+package com.mdlicht.zb.colordiarymvp.activity
 
 import android.support.v7.app.AppCompatActivity
 

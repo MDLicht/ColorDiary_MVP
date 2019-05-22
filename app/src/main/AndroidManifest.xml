@@ -14,17 +14,22 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".acitivity.MainActivity">
+        <activity android:name=".activity.ReadDiaryActivity">
+        </activity>
+        <activity android:name=".activity.ColorHistoryActivity">
+        </activity>
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <receiver android:name=".common.AlarmReceiver">
             <intent-filter>
-                <action android:name="com.mdlicht.zb.colordiary.ALARM"></action>
-                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <action android:name="com.mdlicht.zb.colordiary.ALARM"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
     </application>

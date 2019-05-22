@@ -11,6 +11,8 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 
 import com.mdlicht.zb.colordiarymvp.R
+import com.mdlicht.zb.colordiarymvp.common.AESHelper
+import com.mdlicht.zb.colordiarymvp.common.App
 import com.mdlicht.zb.colordiarymvp.common.showToast
 import com.mdlicht.zb.colordiarymvp.constract.DiaryDialogConstract
 import com.mdlicht.zb.colordiarymvp.database.repository.DiaryRepository
@@ -60,6 +62,7 @@ class DiaryDialog : FullScreenDialog(), DiaryDialogConstract.View {
 
     override fun initView() {
         tvTitle.text = date
+        etContents.setText(contents?.let { AESHelper.decrypt(it, App.getInstance().getNativeKey2()) })
 
         etContents.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {

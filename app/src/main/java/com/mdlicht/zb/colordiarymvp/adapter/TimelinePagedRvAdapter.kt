@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.mdlicht.zb.colordiarymvp.R
+import com.mdlicht.zb.colordiarymvp.activity.ReadSingleDiaryActivity
 import com.mdlicht.zb.colordiarymvp.common.App
 import com.mdlicht.zb.colordiarymvp.database.model.Diary
 import kotlinx.android.synthetic.main.item_timeline.view.*
@@ -37,12 +38,13 @@ class TimelinePagedRvAdapter : PagedListAdapter<Diary, TimelinePagedRvAdapter.Ti
                 ivFeel.setImageDrawable(ColorDrawable(App.feelColorMap[it.feel]!!))
                 tvContents.text = it.getDecryptContents()
                 tvDate.text = it.date
-            }
-            setOnClickListener {
-                it.context.apply {
-//                    startActivity(Intent(this, ReadSingleDiaryActivity::class.java).apply {
-//                        putExtra(ReadSingleDiaryActivity.KEY_DATE, item.date)
-//                    })
+
+                setOnClickListener { v ->
+                    v.context.apply {
+                        startActivity(Intent(this, ReadSingleDiaryActivity::class.java).apply {
+                            putExtra(ReadSingleDiaryActivity.KEY_DATE, it.date)
+                        })
+                    }
                 }
             }
         }

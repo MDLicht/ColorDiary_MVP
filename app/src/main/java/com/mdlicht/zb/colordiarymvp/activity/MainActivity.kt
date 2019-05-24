@@ -128,16 +128,16 @@ class MainActivity : BaseActivity(), MainConstract.View {
         navView.setNavigationItemSelectedListener {
             dlConrainter.closeDrawers()
             when (it.itemId) {
-//                R.id.nav_colorHistory -> {
-//                    startActivity(Intent(this@MainActivity, ColorHistoryActivity::class.java))
-//                }
+                R.id.nav_colorHistory -> {
+                    startActivity(Intent(this@MainActivity, ColorHistoryActivity::class.java))
+                }
 //                R.id.nav_timeline -> {
 //                    startActivity(Intent(this@MainActivity, TimelineActivity::class.java))
 //                }
-//                R.id.nav_settings -> {
-//                    startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
-//                }
-//                else -> throw Exception()
+                R.id.nav_settings -> {
+                    startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
+                }
+                else -> throw Exception()
             }
             true
         }
